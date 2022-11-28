@@ -7,7 +7,10 @@ class SearchService {
   private http: AxiosInstance;
 
   constructor() {
-    this.http = axios.create({ baseURL: process.env.DATA_ENDPOINT });
+    this.http = axios.create({
+      baseURL: process.env.DATA_ENDPOINT,
+      headers: { 'Accept-Encoding': 'application/json' }
+    });
   }
 
   private convert(item: IApiResponseBlockParty): IBlockParty {
