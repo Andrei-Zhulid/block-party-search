@@ -10,6 +10,7 @@
         v-show="!loading && items?.length > 0"
         :items="items"
       />
+      <SearchResultsRowNoData v-show="!loading && items?.length === 0"/>
       <SearchResultsRowLoader v-show="loading"/>
     </v-container>
   </div>
@@ -24,8 +25,18 @@ import IBlockParty from '../../../common/interfaces/IBlockParty';
 import SearchService from '@/services/SearchService';
 import BlockPartyCard from '@/components/BlockPartyCard.vue';
 import SearchResultsRow from '@/components/SearchResultsRow.vue';
+import SearchResultsRowNoData from '@/components/SearchResultsRowNoData.vue';
 
-@Component({ components: { SearchResultsRow, BlockPartyCard, SearchResultsRowLoader, SearchResultsColumn, SearchInput } })
+@Component({
+  components: {
+    SearchResultsRowNoData,
+    SearchResultsRow,
+    BlockPartyCard,
+    SearchResultsRowLoader,
+    SearchResultsColumn,
+    SearchInput
+  }
+})
 export default class HomeView extends Vue {
   // noinspection JSMismatchedCollectionQueryUpdate
   private items: IBlockParty[] = [];
