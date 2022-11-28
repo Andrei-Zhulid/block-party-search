@@ -3,14 +3,7 @@
     <SearchInput/>
 
     <v-container>
-      <v-row>
-        <SearchResultsColumn>
-          <v-skeleton-loader type="article"/>
-        </SearchResultsColumn>
-        <SearchResultsColumn>
-          <v-skeleton-loader type="article"/>
-        </SearchResultsColumn>
-      </v-row>
+      <SearchResultsRowLoader/>
     </v-container>
   </div>
 </template>
@@ -19,7 +12,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import SearchInput from '@/components/SearchInput.vue';
 import SearchResultsColumn from '@/components/SearchResultsColumn.vue';
+import SearchResultsRowLoader from '@/components/SearchResultsRowLoader.vue';
 
-@Component({ components: { SearchResultsColumn, SearchInput } })
+@Component({ components: { SearchResultsRowLoader, SearchResultsColumn, SearchInput } })
 export default class HomeView extends Vue {}
 </script>
