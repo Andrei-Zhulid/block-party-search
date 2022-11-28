@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import IBlockParty from '../interfaces/IBlockParty';
+import IBlockParty from '../../../common/interfaces/IBlockParty';
 import IApiResponse from '../interfaces/IApiResponse';
 import IApiResponseBlockParty from '../interfaces/IApiResponseBlockParty';
 
