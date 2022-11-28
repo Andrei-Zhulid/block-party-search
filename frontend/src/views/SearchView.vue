@@ -1,6 +1,10 @@
 <template>
   <div>
     <SearchInput/>
+
+    <v-container>
+      <!-- Results -->
+    </v-container>
   </div>
 </template>
 
