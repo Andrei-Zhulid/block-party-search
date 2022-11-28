@@ -1,10 +1,13 @@
 <template>
-  <div>Search Page</div>
+  <div>
+    <SearchInput/>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import SearchInput from '@/components/SearchInput.vue';
 
-@Component
+@Component({ components: { SearchInput } })
 export default class HomeView extends Vue {}
 </script>
