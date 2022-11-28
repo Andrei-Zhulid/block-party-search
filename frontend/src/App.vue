@@ -1,7 +1,13 @@
 <template>
   <v-app>
     <v-main>
-      <SearchView/>
+      <v-container class="layout-width pa-4">
+        <v-row>
+          <v-col>
+            <SearchView/>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -13,3 +19,10 @@ import SearchView from '@/views/SearchView.vue';
 @Component({ components: { SearchView } })
 export default class App extends Vue {}
 </script>
+
+<style scoped>
+.layout-width {
+  min-width: 300px;
+  max-width: 900px
+}
+</style>
