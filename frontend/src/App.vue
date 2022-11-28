@@ -23,6 +23,6 @@ export default class App extends Vue {}
 <style scoped>
 .layout-width {
   min-width: 300px;
-  max-width: 900px
+  max-width: 1000px
 }
 </style>
