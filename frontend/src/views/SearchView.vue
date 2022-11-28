@@ -24,6 +24,7 @@ import SearchResultsRow from '@/components/SearchResultsRow.vue';
 
 @Component({ components: { SearchResultsRow, BlockPartyCard, SearchResultsRowLoader, SearchResultsColumn, SearchInput } })
 export default class HomeView extends Vue {
+  // noinspection JSMismatchedCollectionQueryUpdate
   private items: IBlockParty[] = [];
   private loading = false;
 
