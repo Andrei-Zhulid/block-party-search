@@ -1,6 +1,9 @@
 <template>
   <div>
-    <SearchInput class="mb-6"/>
+    <SearchInput
+      class="mb-6"
+      @search="search"
+    />
 
     <v-container class="pa-0">
       <SearchResultsRow
