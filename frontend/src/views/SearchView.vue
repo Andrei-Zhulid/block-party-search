@@ -3,7 +3,20 @@
     <SearchInput/>
 
     <v-container>
-      <!-- Results -->
+      <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-skeleton-loader type="article"/>
+        </v-col>
+        <v-col
+          cols="12"
+          sm="6"
+        >
+          <v-skeleton-loader type="article"/>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
