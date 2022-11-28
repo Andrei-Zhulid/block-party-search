@@ -3,14 +3,10 @@
     <SearchInput class="mb-6"/>
 
     <v-container class="pa-0">
-      <v-row v-show="!loading && items?.length > 0">
-        <SearchResultsColumn
-          v-for="item in items"
-          :key="item.id"
-        >
-          <BlockPartyCard :place="item"/>
-        </SearchResultsColumn>
-      </v-row>
+      <SearchResultsRow
+        v-show="!loading && items?.length > 0"
+        :items="items"
+      />
       <SearchResultsRowLoader v-show="loading"/>
     </v-container>
   </div>
@@ -24,8 +20,9 @@ import SearchResultsRowLoader from '@/components/SearchResultsRowLoader.vue';
 import IBlockParty from '../../../common/interfaces/IBlockParty';
 import SearchService from '@/services/SearchService';
 import BlockPartyCard from '@/components/BlockPartyCard.vue';
+import SearchResultsRow from '@/components/SearchResultsRow.vue';
 
-@Component({ components: { BlockPartyCard, SearchResultsRowLoader, SearchResultsColumn, SearchInput } })
+@Component({ components: { SearchResultsRow, BlockPartyCard, SearchResultsRowLoader, SearchResultsColumn, SearchInput } })
 export default class HomeView extends Vue {
   private items: IBlockParty[] = [];
   private loading = false;
