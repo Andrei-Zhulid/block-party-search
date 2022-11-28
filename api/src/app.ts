@@ -3,11 +3,14 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+import SearchService from './services/SearchService';
+
 const app: Application = express();
 
-app.get('/search', (request: Request, response: Response) => {
+app.get('/search', async (request: Request, response: Response) => {
   try {
-    response.status(200).end();
+    const places = await SearchService.search(<string>request.query.query);
+    response.send(places);
   } catch (error) {
     console.log('GET /search error', error);
     response.status(500).end();
