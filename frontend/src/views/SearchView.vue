@@ -4,18 +4,12 @@
 
     <v-container>
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        <SearchResultsColumn>
           <v-skeleton-loader type="article"/>
-        </v-col>
-        <v-col
-          cols="12"
-          sm="6"
-        >
+        </SearchResultsColumn>
+        <SearchResultsColumn>
           <v-skeleton-loader type="article"/>
-        </v-col>
+        </SearchResultsColumn>
       </v-row>
     </v-container>
   </div>
@@ -24,7 +18,8 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import SearchInput from '@/components/SearchInput.vue';
+import SearchResultsColumn from '@/components/SearchResultsColumn.vue';
 
-@Component({ components: { SearchInput } })
+@Component({ components: { SearchResultsColumn, SearchInput } })
 export default class HomeView extends Vue {}
 </script>
