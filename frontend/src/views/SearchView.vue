@@ -58,3 +58,10 @@ export default class HomeView extends Vue {
   }
 }
 </script>
+
+<style scoped>
+/*noinspection CssUnusedSymbol*/
+.row + .row {
+  margin-top: -12px;
+}
+</style>
